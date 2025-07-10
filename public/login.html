@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Jubex Properties</title>
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+  <div class="login-overlay"></div>
+
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h2>Welcome to Jubex Properties</h2>
+
+      <div class="tab-buttons">
+        <button class="tab active" onclick="showTab('phone')">Login with Phone</button>
+        <button class="tab" onclick="showTab('email')">Login with Email</button>
+      </div>
+
+      <!-- Phone Login -->
+      <form id="phoneLogin" onsubmit="return handlePhoneLogin(event)">
+        <label for="phone">Phone Number</label>
+        <div class="phone-group">
+          <input type="tel" id="phone" placeholder="08123456789" pattern="^[7-9][0-9]{9}$" required />
+        </div>
+
+        <label for="phonePassword">Password</label>
+        <input type="password" id="phonePassword" placeholder="Enter your password" required />
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <!-- Email Login -->
+      <form id="emailLogin" onsubmit="return handleEmailLogin(event)" style="display: none;">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required />
+
+        <label for="emailPassword">Password</label>
+        <input type="password" id="emailPassword" placeholder="Enter your password" required />
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <div class="or-divider"><span>OR</span></div>
+
+      <button onclick="handleGoogleLogin()" class="google-login-btn">
+        <img src="https://img.icons8.com/color/16/000000/google-logo.png"/>
+        Continue with Google
+      </button>
+
+      
+
+      <div class="note">Don’t have an account? <a href="signup.html">Sign up here</a></div>
+    </div>
+  </div>
+
+  <!-- ✅ Firebase SDK (latest compatible versions) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <!-- ✅ Your Login Script (make sure path is correct) -->
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

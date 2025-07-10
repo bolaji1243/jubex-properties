@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jubex Properties - Find Your Perfect Place</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+ <!-- Navigation Bar -->
+<header class="main-header">
+  <div class="container">
+    <h2 class="logo">Jubex Properties</h2>
+   <nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="contact.html">Contact</a>
+  <a href="jubex-auth/login.html" class="login-btn">Login</a>
+
+
+  <!-- Listings button hidden by default -->
+  <a href="listings.html" id="listingsBtn" style="display: none;">Listings</a>
+
+  <a href="https://wa.me/8177775778" class="cta-btn">Contact Us</a>
+</nav>
+  </div>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Jubex Properties</h1>
+        <p>Buy, Sell, or Rent Anywhere in Nigeria</p>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search location or title..." />
+          <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="house">House</option>
+            <option value="land">Land</option>
+            <option value="flat">Flat</option>
+          </select>
+          <button onclick="applyFilters()">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section class="listings-section">
+    <h2>Featured Properties</h2>
+    <div id="propertyList" class="property-grid">
+      <!-- Cards will load here from JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-grid">
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="about.html">About Jubex</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <a href="privacy.html">Privacy Policy</a>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Copyright Policy</a></li>
+        <a href="data-deletion.html">data deletion
+</a>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Safety Tips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Our Blog</a></li>
+        <li><a href="#">Jubex on Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Twitter</a></li>
+        
+
+      </ul>
+    </div>
+
+        <!-- Admin Panel link removed for privacy -->
+      </ul>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>© 2025 Jubex Properties. Built for real estate excellence.</p>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+  // Check login status
+  const isLoggedIn = localStorage.getItem('jubexLoggedIn');
+
+  if (isLoggedIn === 'true') {
+    document.getElementById('listingsLink').style.display = 'inline';
+  }
+</script>
+
+</body>
+</html>

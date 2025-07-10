@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Jubex Properties</title>
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+  <div class="login-overlay"></div>
+
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h2>Create Your Account</h2>
+
+      <div class="tab-buttons">
+        <button class="tab active" onclick="showTab('phone')">Sign Up with Phone</button>
+        <button class="tab" onclick="showTab('email')">Sign Up with Email</button>
+      </div>
+
+      <!-- Phone Sign Up -->
+  <!-- Phone Sign Up -->
+<form id="phoneSignup" onsubmit="return handlePhoneSignup(event)">
+  <label for="signupPhone">Phone Number</label>
+  <div class="phone-group">
+    <span class="code">+234</span>
+    <input type="tel" id="signupPhone" placeholder="8123456789" pattern="^[7-9][0-9]{9}$" required />
+  </div>
+
+  <label for="phonePassword">Password</label>
+  <input type="password" id="phonePassword" placeholder="Create a password" required />
+
+  <div id="recaptcha-container"></div>
+  <button type="submit" class="login-btn">Send OTP</button>
+
+  <!-- Hidden OTP Section -->
+  <div id="otpSection" style="display: none; margin-top: 15px;">
+    <label for="otpCode">Enter OTP</label>
+    <input type="text" id="otpCode" placeholder="Enter the code sent to your phone" required />
+    <button type="button" onclick="confirmOtpCode()" class="login-btn">Verify OTP & Complete Signup</button>
+  </div>
+</form>
+
+
+  <!-- ✅ Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <!-- ✅ Signup Logic -->
+  <script src="assets/js/signup.js"></script>
+
+</body>
+
+</html>

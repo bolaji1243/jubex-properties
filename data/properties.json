@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Duplex in Lekki",
+    "location": "Lagos",
+    "type": "house",
+    "price": 60000000,
+    "image": "https://via.placeholder.com/400x200?text=Lekki+Duplex",
+    "phone": "2347012345678"
+  },
+  {
+    "id": 2,
+    "title": "Affordable Land in Ibadan",
+    "location": "Ibadan",
+    "type": "land",
+    "price": 1800000,
+    "image": "https://via.placeholder.com/400x200?text=Ibadan+Land",
+    "phone": "2347011112233"
+  }
+]
